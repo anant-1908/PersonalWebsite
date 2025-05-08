@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>On Originality</title>
+  <link rel="icon" href=
+"https://upload.wikimedia.org/wikipedia/commons/thumb/1/13/Diogenes_statue_in_Sinop-top.jpg/1200px-Diogenes_statue_in_Sinop-top.jpg"
+        type="image/x-icon" />
+  <link rel="stylesheet" href="style.css">
+  <link href='https://fonts.googleapis.com/css?family=EB Garamond' rel='stylesheet'>
+</head>
+<body>
+  <header>
+    <h1>anant1908</h1>
+  </header>
+  <h2>On Originality</h2><hr>
+
+  <main>
+    <div id="lists">
+      <ol>
+        <li><u><b><a href="On Originality.html">On Originality</a></u></b></li><hr>
+        <li><u><b>On Religion</u></b></li><hr>
+        <li><u><b>On Genius</b></u></li><hr>
+        <li><u><b>Neutralising Novelists, Over-Rewarding Poets</b></u></li><hr>
+        <li><u><b>On Good Writing</b></u></li><hr>
+        <li><u><b>Conformists and Contrarians</b></u></li><hr>
+        <li><u><b>The Purest Nihilist</b></u></li><hr>
+        <li><u><b>Extremism is a Necessary By-product</b></u></li><hr>
+        <li><u><b>The Leech and The Scrooge</b></u></li><hr>
+        <li><u><b>Confessions of a Lonely Man</b></u></li><hr>
+      </ol>
+    </div>
+    <div id="writing">
+      <div>
+        <input type="number" id="ageInput" placeholder="How old are you?">
+        <p>Your Age: <span id="displayAge">-</span></p>
+        <p>Your thoughts have accounted for ~<span id="thoughtPercentage"></span>% of mankind's thoughts.</p><br><br>
+      </div>
+    <div id="ind">
+      The biggest fear I have 
+      
+    </div>
+</div>
+
+
+  </main>
+  
+  
+
+  <script src="script.js"></script>
+  <script>
+    document.getElementById('ageInput').addEventListener('input', function() {
+      let age = parseInt(this.value);
+      let avg_thoughts_per_day = 60000; // Estimated human thoughts per day
+      let days_lived = age * 365; // Roughly, ignoring leap years
+      let total_thoughts = avg_thoughts_per_day * days_lived;
+      let estimated_human_thoughts = 1e20; // Rough estimate of all human thoughts ever
+
+      let thoughtPercentage = (total_thoughts / estimated_human_thoughts * 100).toFixed(13);
+      document.getElementById('displayAge').textContent = isNaN(age) ? '-' : age;
+      document.getElementById('thoughtPercentage').textContent = isNaN(thoughtPercentage) ? '0' : thoughtPercentage;
+    });
+  </script>
+  <hr>
+  <footer>
+    <p>© 2025 My writings are under <a href="https://creativecommons.org/licenses/by/4.0/">Creative Commons BY 4.0</a>.<br>
+    </p>
+  </footer>
+  
+</body>
+</html>
